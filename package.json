@@ -1,0 +1,23 @@
+{
+  "name": "emilieturtureanprojet3",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/main.scss:./css/main.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MimiT94/EmilieTurturean_3_05022021.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MimiT94/EmilieTurturean_3_05022021/issues"
+  },
+  "homepage": "https://github.com/MimiT94/EmilieTurturean_3_05022021#readme",
+  "dependencies": {
+    "node-sass": "^5.0.0",
+    "sass": "^1.32.8"
+  }
+}
