@@ -1,0 +1,15 @@
+@mixin bouton(){
+  padding: 10px;
+  margin-top: 30px;
+  border-radius: 20px;
+  border: none;
+  color: white;
+  font-size: 1.1rem;
+  font-weight: bold;
+  background: linear-gradient(90deg, rgba(217,67,238,0.8701855742296919) 16%, rgba(231,42,212,1) 47%, rgba(169,0,255,1) 100%);
+  box-shadow: 0px 0px 2px black;
+}
+@mixin footer(){
+  padding: 20px;
+  background-color: black;
+}
