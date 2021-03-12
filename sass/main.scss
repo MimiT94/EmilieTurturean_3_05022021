@@ -1,4 +1,257 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+@import "variables";
+@import "mixins";
+@import "footer";
 
-  background-color: red
+
+
+:root {
+  font-size: 10px;
 }
+
+h1, h2, h3 {
+  font-weight: bold;
+}
+
+button {
+  @include bouton();
+}
+
+body {
+  font-family: 'Roboto';
+}
+
+header {
+  display: grid;
+  grid-template-areas:
+            "titre"
+            "localisation"
+            "resa"
+             "fonctionnement";
+  text-align: center;
+  grid-template-rows: 0.5fr 4fr 1fr;
+
+  h1 {
+    grid-area: titre;
+    color: black;
+    font-family: 'Shrikhand';
+  }
+
+  i {
+    font-size: 1.2rem;
+    padding-right: 10px;
+  }
+}
+
+
+#fonct {
+  text-align: left;
+  margin: 20px;
+
+}
+form {
+  background-color: $fond;
+}
+header form div {
+  grid-area: resa;
+
+}
+header form {
+  h2 {
+    padding: 20px 60px 20px 60px;
+  }
+
+  p {
+    padding: 0 25px 0 25px;
+    font-size: 1.2rem;
+  }
+}
+
+header form label {
+  background-color: #eaeaea;
+  display: block;
+  grid-area: localisation;
+
+  input {
+    display: inline-block;
+    line-height: 30px;
+    background-color: #eaeaea;
+
+  }}
+
+  header #city {
+    grid-area: localisation;
+    color: black;
+    line-height: 30px;
+  }
+
+  header ul li {
+    padding: 20px 30px;
+    border-radius: 20px;
+    margin: 15px;
+    font-size: 1.3rem;
+    background-color: $fond;
+    line-height: 10px;
+    position: relative;
+    text-align: left;
+    &:hover{
+      background-color: lightgray;
+    }
+
+    &::before {
+      content: counter(li);
+      display: flex;
+      position: absolute;
+      left: -10px;
+      border-radius: 50%;
+      background-color: $primaire;
+      height: 20px;
+      top: 50%;
+      width: 20px;
+      transform: translateY(-10px);
+      justify-content: center;
+      line-height: 20px;
+      color: white;
+    }
+
+  }
+
+
+  header ul li i {
+    width: 20px;
+  }
+
+  li {
+    counter-increment: li
+  }
+
+  input {
+    border: none;
+  }
+
+
+  main {
+    background-color: $fond;
+    display: grid;
+    grid-template-areas:
+    "titre"
+    "resto1"
+    "resto2"
+    "resto3"
+    "resto4";
+    grid-gap: 20px;
+    padding: 40px 20px 40px 20px;
+
+    h2 {
+      grid-area: titre;
+    }
+  }
+
+
+  #resto1 {
+    grid-area: resto1;
+  }
+
+  #resto2 {
+    grid-area: resto2;
+  }
+
+  #resto3 {
+    grid-area: resto3;
+  }
+
+  #resto4 {
+    grid-area: resto4;
+  }
+
+  figure {
+    position: relative;
+
+    figcaption {
+      background-color: white;
+      border-radius: 0 0 10px 10px;
+      padding: 10px;
+
+    }
+
+  }
+
+  main article figure img {
+    object-fit: cover;
+    width: 100%;
+    height: 180px;
+    border-radius: 10px 10px 0 0;
+  }
+
+  main article a {
+    display: block;
+  }
+
+  .nouveau {
+    position: absolute;
+    right: 20px;
+    top: 12px;
+    background-color: $tertiaire;
+    color: green;
+    font-weight: bold;
+    font-size: 1.1rem;
+    padding: 5px;
+  }
+
+  .fa-heart {
+    position: absolute;
+    right: 20px;
+    bottom: 15px;
+    font-size: 2rem;
+
+
+&:before {
+  content: "\f004";
+  font-weight: bold;
+  transition: color 1s ease-out;
+}}
+.fa-heart:hover::before{
+  color: red;
+  cursor: pointer;
+}
+
+
+  ////****chargement****///
+  .chargement{
+    border: 10px solid $secondaire;
+    border-top: 10px solid $primaire;
+    border-bottom: 10px solid $tertiaire;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: auto;
+    position: absolute;
+    top:0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    animation: spin 1.5s linear infinite;
+    -webkit-animation: spin 1.5s linear infinite;
+    -o-animation: spin 1.5s linear infinite;
+
+  }
+  @-webkit-keyframes spin {
+    0%{
+      transform: rotate(0deg);
+    }
+    100%{
+      transform: rotate(360deg);
+
+    }
+  }
+  @keyframes spin {
+    0%{
+      transform: rotate(0deg);
+    }
+    100%{
+      transform: rotate(360deg);
+
+    }
+  }

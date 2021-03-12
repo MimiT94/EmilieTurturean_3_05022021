@@ -11,12 +11,10 @@ body{
 
 h1 {
     font-family: 'Shrikhand';
-
 }
-img {
-    object-fit: cover;
+h2 {
+    font-weight: 900;
 }
-
 header {
     display: grid;
     grid-template-areas:
@@ -46,14 +44,22 @@ header form div {
 }
 header form label input {
     display: inline-block;
+    line-height: 30px;
 }
 header #city {
     grid-area: localisation;
-
-
+    color: black;
+    line-height: 30px;
 }
-header ul li {
+form div h2 {
+   padding:  20px 60px 20px 60px;
+}
 
+header ul li {
+padding: 20px;
+    border-radius: 20px;
+    margin: 15px;
+    font-weight: bold;
 }
 
 input{
@@ -89,29 +95,35 @@ main h2 {
 }
 figure{
     position: relative;
+
 }
 figure figcaption {
     background-color: white;
+    border-radius:   0px 0px 10px 10px;
+    padding: 10px;
 
 }
 main article figure img {
 object-fit: cover;
-
+    width: 100%;
+    height: 180px;
+  border-radius:   10px 10px 0px 0px;
 }
 main article a {
     display: block;
 }
 .nouveau {
 position: absolute;
-    right: 50px;
-    top: 50px;
+    right: 20px;
+    top: 30px;
     background-color: aqua;
 }
 .fa-heart{
     position: absolute;
     right:20px;
-    bottom: 20px;
+    bottom: 15px;
     background-color: darkorange;
+    font-size: 2rem;
 }
 footer {
     padding: 20px;
