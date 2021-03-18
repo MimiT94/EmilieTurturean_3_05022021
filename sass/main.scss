@@ -97,7 +97,10 @@ header form label {
     position: relative;
     text-align: left;
     &:hover{
-      background-color: lightgray;
+      background-color: #f5edff;
+      i {
+        color: $primaire;
+      }
     }
 
     &::before {
@@ -121,6 +124,7 @@ header form label {
 
   header ul li i {
     width: 20px;
+
   }
 
   li {
@@ -205,16 +209,17 @@ header form label {
     right: 20px;
     bottom: 15px;
     font-size: 2rem;
+    color: black;
 
 
 &:before {
   content: "\f004";
-  font-weight: bold;
   transition: color 1s ease-out;
 }}
 .fa-heart:hover::before{
-  color: red;
+  color: $primaire;
   cursor: pointer;
+  font-weight: bold;
 }
 
 
