@@ -6,8 +6,12 @@
   color: white;
   font-size: 1.1rem;
   font-weight: bold;
-  background: linear-gradient(90deg, rgba(217,67,238,0.8701855742296919) 16%, rgba(231,42,212,1) 47%, rgba(169,0,255,1) 100%);
-  box-shadow: 0px 0px 2px black;
+  background: linear-gradient(166deg, rgba(255,121,218,1) 0%, rgba(147,86,220,1) 100%);
+  box-shadow: 0 0 2px black;
+  &:hover {
+    box-shadow: 5px 5px 12px 1px rgba(0,0,0,1);
+    transform: scale(1.1);
+  }
 }
 @mixin footer(){
   padding: 20px;

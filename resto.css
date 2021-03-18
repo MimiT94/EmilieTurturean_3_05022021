@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
 
 
 :root{
@@ -19,9 +20,21 @@ a{
 
 input{
     visibility:hidden;
+    position: absolute;
 }
 .check {
     visibility: hidden;
+    position: absolute;
+    top: -10px;
+    right: 0;
+    color: white;
+    background-color: #99e2d0;
+    line-height: 40px;
+    width: 60px;
+    font-size: 20px;
+}
+.check i {
+transform: rotate(360deg);
 }
 h1 {
     font-family: 'Shrikhand';
@@ -33,7 +46,9 @@ main form article section div h3 {
 header h1 {
     text-align: center;
 }
-
+header {
+    background-color: #f6f6f6;
+}
 #titre {
     position: relative;
     border-radius: 20px 20px 0 0;
@@ -49,28 +64,97 @@ div {
     border-radius: 10px;
     background-color: white;
     margin: 10px 0px 10px 0px;
+    position: relative;
+    padding: 15px;
+}
+.prix {
+    position: absolute;
+    bottom: 15px;
+    right: 25px;
+    font-weight: bold;
 }
 
+article
+{
+    background-color: #f6f6f6;
+    padding:0px 15px 15px 15px;
+
+}
+
+section  div{
+    animation-name: fadeInUp;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    animation-delay: 0.5s;
+}
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        -webkit-transform: translate3d(0, 100%, 0);
+        transform: translate3d(0, 100%, 0);
+    }
+
+    to {
+        opacity: 1;
+        -webkit-transform: none;
+        transform: none;
+    }
+}
 main {
     background-color: lightgray;
     margin-top: -30px ;
 }
-form{
-    padding:0px 15px 15px 15px;
+article h2 {
+    border-bottom: 2px solid #99e2d0;
+    width: 45px;
+    text-transform: uppercase;
+    font-weight: normal;
 }
-
-
+article h3 {
+    font-weight: bold;
+    font-size: 1.4rem;
+}
+article p {
+    font-size: 1.2rem;
+}
 #commander{
     text-align: center;
 }
-footer {
-    @include footer();
 
-
-}
 footer a,footer h1  {
     color: white;
 }
 footer i {
     padding-right: 0.5em;
+}
+
+.fa-heart {
+    position: absolute;
+    right: 20px;
+    bottom: 15px;
+    font-size: 2rem;
+    color: black;
+}
+
+
+.fa-heart:before {
+     content: "\f004";
+     transition: color 1s ease-out;
+ }
+.fa-heart:hover::before{
+    color: #9356DC;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+@media screen and (min-width: 769px)  {
+    article section{
+       text-align: center;
+
+    }
+    header img {
+        height: 250px;
+        width: 100%;
+        object-fit: cover;
+    }
 }
