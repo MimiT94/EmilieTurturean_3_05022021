@@ -1,0 +1,291 @@
+@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+@import "mixins";
+@import "variables";
+@import "footer";
+
+
+:root {
+  font-size: 10px;
+  font-family: 'Roboto';
+
+}
+.valider {
+  text-align: center;
+}
+header a i {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 1.3rem;
+  color: black;
+}
+
+a {
+  display: block;
+}
+
+input {
+  display: none;
+}
+
+
+
+h1 {
+  font-family: 'Shrikhand';
+  color: black;
+}
+
+ h3 {
+
+  font-weight: bold;
+}
+
+
+
+
+header {
+  background-color: #f6f6f6;
+
+
+  h1 {
+    text-align: center;
+  }
+}
+
+#titre {
+  position: relative;
+  border-radius: 20px 20px 0 0;
+
+  i {
+    position: absolute;
+    top: 7px;
+    right: 40px;
+    font-size: 1.5rem;
+  }
+
+}
+
+article {
+  background-color: #f6f6f6;
+  padding: 0px 15px 15px 15px;
+
+
+}
+
+section div {
+  animation-name: fadeInUp;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  animation-delay: 0.5s;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+main {
+  background-color: lightgray;
+  margin-top: -30px;
+}
+
+article h2 {
+  border-bottom: 2px solid #99e2d0;
+  width: 45px;
+  text-transform: uppercase;
+  font-weight: normal;
+}
+
+article h3 {
+  font-weight: bold;
+  font-size: 1.4rem;
+}
+
+article p {
+  font-size: 1.2rem;
+}
+
+#commander {
+  text-align: center;
+  @include bouton();
+}
+
+footer {
+  @include footer();
+
+
+}
+
+footer a, footer h1 {
+  color: white;
+}
+
+footer i {
+  padding-right: 0.5em;
+}
+
+.fa-heart {
+  position: absolute;
+  right: 20px;
+  bottom: 15px;
+
+  color: black;
+
+}
+
+.fa-heart:before {
+  content: "\f004";
+  transition: color 1s ease-out;
+
+}
+
+.fa-heart:hover::before {
+  cursor: pointer;
+  font-weight: bold;
+  color: transparent;
+  background: linear-gradient(to top, $primaire, $secondaire);
+  -webkit-background-clip: text;
+  transform: translate(-50%, -50%);
+  transition: all .3s ease-out;
+  cursor: pointer;
+
+
+}
+.ctn {
+  overflow: hidden;
+  cursor: pointer;
+  animation-name: on-load;
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
+  background-color: #fff;
+  margin: 10px 0;
+  border-radius: 15px;
+  padding-left: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 3px 5px 15px rgba(0, 0, 0, .2);
+  opacity: 0
+}
+
+.ctn__txt {
+  flex-grow: 1
+}
+
+.ctn__txt>h3 {
+  margin-bottom: 5px;
+  font-size: 18px;
+  text-overflow: ellipsis;
+  width: 90%;
+  white-space: nowrap;
+  overflow: hidden
+}
+
+.ctn__txt__ctn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 10px
+}
+
+.ctn__txt__ctn>p:nth-child(2) {
+  font-weight: bold;
+  font-size: 14px;
+  margin-left: 10px
+}
+
+.ctn__txt__ctn p:first-child {
+  flex-grow: 1;
+  font-size: 14px;
+  color: #343333;
+  text-overflow: ellipsis;
+  width: 100px;
+  white-space: nowrap;
+  overflow: hidden
+}
+
+.ctn__check {
+  width: 0;
+  background-color: #99e2d0;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  transition: 400ms;
+  transform-origin: right;
+  overflow: hidden;
+  border-radius: 0 15px 15px 0
+}
+
+.ctn__check>i {
+  font-size: 20px;
+}
+
+.ctn:hover .ctn__check {
+  width: 60px;
+  transition: 400ms;
+}
+
+.ctn:hover .ctn__check>i {
+  animation-name: rotate;
+  animation-duration: 400ms;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg)
+  }
+  to {
+    transform: rotate(360deg)
+  }
+}
+
+@keyframes on-load {
+  from {
+    opacity: 0;
+    transform: translateY(20px)
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0)
+  }
+}
+
+.ctn--2 {
+  animation-delay: 100ms
+}
+
+
+@media screen and (min-width: 769px) {
+
+  header img {
+    height: 250px;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+footer {
+  @include footer();
+  text-align: center;
+
+}
+
+a, footer h1 {
+  color: white;
+}
+
+i {
+  padding-right: 0.5em;
+}

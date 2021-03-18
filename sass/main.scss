@@ -26,15 +26,15 @@ body {
 header {
   display: grid;
   grid-template-areas:
-            "titre"
+            "title"
             "localisation"
-            "resa"
+            "reservation"
              "fonctionnement";
   text-align: center;
   grid-template-rows: 0.5fr 4fr 1fr;
 
   h1 {
-    grid-area: titre;
+    grid-area: title;
     color: black;
     font-family: 'Shrikhand';
   }
@@ -55,7 +55,7 @@ form {
   background-color: $fond;
 }
 header form div {
-  grid-area: resa;
+  grid-area: reservation;
 
 }
 header form {
@@ -73,6 +73,7 @@ header form label {
   background-color: #eaeaea;
   display: block;
   grid-area: localisation;
+  box-shadow: 1px 2px 5px grey;
 
   input {
     display: inline-block;
@@ -96,6 +97,7 @@ header form label {
     line-height: 10px;
     position: relative;
     text-align: left;
+    box-shadow: 6px 10px 17px lightgrey;
     &:hover{
       background-color: #f5edff;
       i {
@@ -204,59 +206,190 @@ header form label {
     padding: 5px;
   }
 
-  .fa-heart {
-    position: absolute;
-    right: 20px;
-    bottom: 15px;
-    font-size: 2rem;
-    color: black;
+.fa-heart {
+  position: absolute;
+  right: 20px;
+  bottom: 15px;
 
+  color: black;
 
-&:before {
-  content: "\f004";
-  transition: color 1s ease-out;
-}}
-.fa-heart:hover::before{
-  color: $primaire;
-  cursor: pointer;
-  font-weight: bold;
 }
 
 
-  ////****chargement****///
-  .chargement{
-    border: 10px solid $secondaire;
-    border-top: 10px solid $primaire;
-    border-bottom: 10px solid $tertiaire;
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    margin: auto;
+.fa-heart:before {
+  content: "\f004";
+  transition: color 1s ease-out;
+  font-size: 2rem;
+}
+.fa-heart:hover::before{
+  cursor: pointer;
+  font-weight: bold;
+  color: transparent;
+  background: linear-gradient(to top,$primaire  ,$secondaire);
+  -webkit-background-clip: text;
+  transform: translate(-50%, -50%);
+  transition: all .3s ease-out;
+  cursor: pointer;
+
+
+}
+
+/*chargement*/
+
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+
+$dark: rgba(0, 0, 0, 0.8);
+
+
+
+#no-freeze-spinner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  transition: all 0.1s linear;
+  opacity: 0;
+  height: 100vh;
+  transform: scale(10);
+  z-index: -1;
+  background: $dark;
+}
+.no-freeze-spinner #no-freeze-spinner {
+  z-index: 9999;
+  opacity: 0.5;
+  transform: scale(1);
+  animation: loading-disparition .5s 3s ease-in forwards;
+}
+@keyframes loading-disparition {
+ from {
+   opacity:1;
+  }
+
+  to {
+   opacity: 0;
+    z-index: -6;
     position: absolute;
-    top:0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    animation: spin 1.5s linear infinite;
-    -webkit-animation: spin 1.5s linear infinite;
-    -o-animation: spin 1.5s linear infinite;
+    width: 0%;
+
 
   }
-  @-webkit-keyframes spin {
-    0%{
-      transform: rotate(0deg);
-    }
-    100%{
-      transform: rotate(360deg);
-
-    }
+}
+#no-freeze-spinner > div > div {
+  animation-play-state: paused;
+  border: 5px solid $primaire;
+  border-radius: 50%;
+  animation: rotate 1s infinite linear;
+  border-left-color: $secondaire;
+  width: 100%;
+  height: 100%;
+}
+#no-freeze-spinner > div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  border-radius: 50%;
+  box-shadow: 0 0 0 2000px $dark;
+  width: 60px;
+  height: 60px;
+  padding: 5px;
+}
+.no-freeze-spinner #no-freeze-spinner div div {
+  animation-play-state: running;
+}
+@keyframes loadicons {
+  0% {
+    transform: scale(0) translate3d(0, 0, 0);
   }
-  @keyframes spin {
-    0%{
-      transform: rotate(0deg);
-    }
-    100%{
-      transform: rotate(360deg);
-
-    }
+  11% {
+    transform: scale(1.2) translate3d(0, 0, 0);
   }
+  22% {
+    transform: scale(1) translate3d(0, 0, 0);
+  }
+  33% {
+    transform: scale(0) translate3d(0, 0, 0);
+  }
+}
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.no-freeze-spinner #no-freeze-spinner i {
+  font-size: 24px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  color: $tertiaire;
+  width: 24px;
+  height: 24px;
+  line-height: 1;
+  transform: scale(0) translate3d(0, 0, 0);
+}
+.no-freeze-spinner #no-freeze-spinner i:nth-of-type(1) {
+  animation: loadicons 3s infinite ease-in-out;
+}
+.no-freeze-spinner #no-freeze-spinner i:nth-of-type(2) {
+  animation: loadicons 3s 1s infinite ease-in-out;
+}
+.no-freeze-spinner #no-freeze-spinner i:nth-of-type(3) {
+  animation: loadicons 3s 2s infinite ease-in-out;
+}
+
+
+
+
+
+@media screen and (min-width: 426px) /**tablette**/
+{
+  main  {
+
+    display: grid;
+    grid-template-areas:
+    "titre titre"
+            "resto1 resto2"
+            "resto3 resto4";
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+
+  }
+  main h2 {
+    grid-area: titre;
+    text-align: center;
+  }
+  #resto1 {
+    grid-area: resto1;
+  }
+  #resto2 {
+    grid-area: resto2;
+  }
+  #resto3 {
+    grid-area: resto3;
+  }
+  #resto4 {
+    grid-area: resto4;
+  }
+  footer {
+    text-align: center;
+  }
+}
+@media screen and (min-width: 769px) //**ordinateur***/
+  {
+  header ul li {
+    width: 50%;
+
+  }
+  header ul {
+    display: flex;
+  }
+  #fonct {
+    text-align: center;
+  }
+
+}
