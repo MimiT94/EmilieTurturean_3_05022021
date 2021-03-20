@@ -17,7 +17,7 @@ header a i {
   position: absolute;
   top: 10px;
   left: 10px;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   color: black;
 }
 
@@ -184,8 +184,7 @@ footer i {
 
 .ctn__txt>h3 {
   margin-bottom: 5px;
-  font-size: 18px;
-  text-overflow: ellipsis;
+    text-overflow: ellipsis;
   width: 90%;
   white-space: nowrap;
   overflow: hidden
@@ -200,13 +199,13 @@ footer i {
 
 .ctn__txt__ctn>p:nth-child(2) {
   font-weight: bold;
-  font-size: 14px;
+  font-size: 1.2rem;
   margin-left: 10px
 }
 
 .ctn__txt__ctn p:first-child {
   flex-grow: 1;
-  font-size: 14px;
+  font-size: 1.2rem;
   color: #343333;
   text-overflow: ellipsis;
   width: 100px;
