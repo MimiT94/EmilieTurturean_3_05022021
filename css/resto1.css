@@ -63,7 +63,7 @@ header h1 {
 }
 #titre i {
   position: absolute;
-  top: 7px;
+  top: 28px;
   right: 40px;
   font-size: 1.5rem;
 }
@@ -95,6 +95,9 @@ section div {
 main {
   background-color: lightgray;
   margin-top: -30px;
+}
+main header {
+  padding-top: 20px;
 }
 
 article h2 {
@@ -287,6 +290,59 @@ a, footer h1 {
 
 i {
   padding-right: 0.5em;
+}
+
+@media screen and (min-width: 769px) {
+  article {
+    display: grid;
+    grid-template-areas: "entree plat dessert" ". commander .";
+    grid-column-gap: 20px;
+  }
+
+  #entree {
+    grid-area: entree;
+  }
+
+  #plat {
+    grid-area: plat;
+  }
+
+  #dessert {
+    grid-area: dessert;
+  }
+
+  .valider {
+    grid-area: commander;
+  }
+}
+@media screen and (min-width: 426px) and (max-width: 768px) {
+  header img {
+    height: 270px;
+    width: 100%;
+  }
+
+  article {
+    display: grid;
+    grid-template-areas: "entree plat" "dessert commander";
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 20px;
+  }
+
+  #entree {
+    grid-area: entree;
+  }
+
+  #plat {
+    grid-area: plat;
+  }
+
+  #dessert {
+    grid-area: dessert;
+  }
+
+  .valider {
+    grid-area: commander;
+  }
 }
 
 /*# sourceMappingURL=resto1.css.map */
