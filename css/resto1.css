@@ -136,6 +136,7 @@ article p {
 footer {
   padding: 20px;
   background-color: black;
+  text-align: left;
 }
 
 footer a, footer h1 {
@@ -281,7 +282,6 @@ footer i {
 footer {
   padding: 20px;
   background-color: black;
-  text-align: center;
 }
 
 a, footer h1 {
@@ -314,6 +314,10 @@ i {
   .valider {
     grid-area: commander;
   }
+
+  footer {
+    text-align: center;
+  }
 }
 @media screen and (min-width: 426px) and (max-width: 768px) {
   header img {
@@ -342,6 +346,10 @@ i {
 
   .valider {
     grid-area: commander;
+  }
+
+  footer {
+    text-align: center;
   }
 }
 

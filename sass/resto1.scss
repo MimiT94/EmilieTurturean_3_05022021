@@ -125,6 +125,7 @@ article p {
 
 footer {
   @include footer();
+  text-align: left;
 
 
 }
@@ -281,7 +282,6 @@ footer i {
 
 footer {
   @include footer();
-  text-align: center;
 
 }
 
@@ -318,6 +318,9 @@ i {
   .valider {
     grid-area: commander;
   }
+  footer{
+    text-align: center;
+  }
 }
 
 @media screen and (min-width: 426px) and (max-width: 768px) /**tablette**/
@@ -344,5 +347,8 @@ i {
   }
   .valider {
     grid-area: commander;
+  }
+  footer {
+    text-align: center;
   }
 }
