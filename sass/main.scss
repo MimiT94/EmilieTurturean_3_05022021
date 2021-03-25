@@ -6,7 +6,6 @@
 @import "footer";
 
 
-
 :root {
   font-size: 10px;
 }
@@ -51,13 +50,16 @@ header {
   margin: 20px;
 
 }
+
 form {
   background-color: $fond;
 }
+
 header form div {
   grid-area: reservation;
 
 }
+
 header form {
   h2 {
     padding: 20px 60px 20px 60px;
@@ -80,139 +82,144 @@ header form label {
     line-height: 30px;
     background-color: #eaeaea;
 
-  }}
+  }
+}
 
-  header #city {
-    grid-area: localisation;
-    color: black;
-    line-height: 30px;
+header #city {
+  grid-area: localisation;
+  color: black;
+  line-height: 30px;
+}
+
+header ul li {
+  padding: 20px 30px;
+  border-radius: 20px;
+  margin: 15px;
+  font-size: 1.4rem;
+  background-color: $fond;
+  line-height: 10px;
+  position: relative;
+  text-align: left;
+  box-shadow: 6px 10px 17px lightgrey;
+
+  &:hover {
+    background-color: #f5edff;
+
+    i {
+      color: $primaire;
+    }
   }
 
-  header ul li {
-    padding: 20px 30px;
-    border-radius: 20px;
-    margin: 15px;
-    font-size: 1.4rem;
-    background-color: $fond;
-    line-height: 10px;
-    position: relative;
-    text-align: left;
-    box-shadow: 6px 10px 17px lightgrey;
-    &:hover{
-      background-color: #f5edff;
-      i {
-        color: $primaire;
-      }
-    }
-
-    &::before {
-      content: counter(li);
-      display: flex;
-      position: absolute;
-      left: -10px;
-      border-radius: 50%;
-      background-color: $primaire;
-      height: 20px;
-      top: 50%;
-      width: 20px;
-      transform: translateY(-10px);
-      justify-content: center;
-      line-height: 20px;
-      color: white;
-    }
-
-  }
-
-
-  header ul li i {
+  &::before {
+    content: counter(li);
+    display: flex;
+    position: absolute;
+    left: -10px;
+    border-radius: 50%;
+    background-color: $primaire;
+    height: 20px;
+    top: 50%;
     width: 20px;
-
+    transform: translateY(-10px);
+    justify-content: center;
+    line-height: 20px;
+    color: white;
   }
 
-  li {
-    counter-increment: li
-  }
-
-  input {
-    border: none;
-  }
+}
 
 
-  main {
-    background-color: $fond;
-    display: grid;
-    grid-template-areas:
+header ul li i {
+  width: 20px;
+
+}
+
+li {
+  counter-increment: li
+}
+
+input {
+  border: none;
+}
+
+
+main {
+  background-color: $fond;
+  display: grid;
+  grid-template-areas:
     "titre"
     "resto1"
     "resto2"
     "resto3"
     "resto4";
-    grid-gap: 20px;
-    padding: 40px 20px 40px 20px;
+  grid-gap: 20px;
+  padding: 40px 20px 40px 20px;
 
-    h2 {
-      grid-area: titre;
-    }
+  h2 {
+    grid-area: titre;
   }
+}
 
 
-  #resto1 {
-    grid-area: resto1;
-  }
+#resto1 {
+  grid-area: resto1;
+}
 
-  #resto2 {
-    grid-area: resto2;
-  }
+#resto2 {
+  grid-area: resto2;
+}
 
-  #resto3 {
-    grid-area: resto3;
-  }
+#resto3 {
+  grid-area: resto3;
+}
 
-  #resto4 {
-    grid-area: resto4;
-  }
+#resto4 {
+  grid-area: resto4;
+}
 
-  figure {
-    position: relative;
+figure {
+  position: relative;
 
-    figcaption {
-      background-color: white;
-      border-radius: 0 0 10px 10px;
-      padding: 10px;
-      h3 {
-        font-size: 1.4rem;
-        color: black;
-      }
-      p {
-        font-size: 1.2rem;
-        color: black;
-      }
+  figcaption {
+    background-color: white;
+    border-radius: 0 0 10px 10px;
+    padding: 10px;
 
+    h3 {
+      font-size: 1.4rem;
+      color: black;
     }
 
+    p {
+      font-size: 1.2rem;
+      color: black;
+    }
+
   }
 
-  main article figure img {
-    object-fit: cover;
-    width: 100%;
-    height: 180px;
-    border-radius: 10px 10px 0 0;
-  }
+}
 
-  main article a {
-    display: block;
-  }
+main article figure img {
+  object-fit: cover;
+  width: 100%;
+  height: 180px;
+  border-radius: 10px 10px 0 0;
+}
 
-  .nouveau {
-    position: absolute;
-    right: 20px;
-    top: 12px;
-    background-color: $tertiaire;
-    color: green;
-    font-weight: bold;
-    font-size: 1.1rem;
-    padding: 5px;
-  }
+main article a {
+  display: block;
+}
+
+.nouveau {
+  position: absolute;
+  right: 20px;
+  top: 12px;
+  background-color: $tertiaire;
+  color: green;
+  font-weight: bold;
+  font-size: 1.1rem;
+  padding: 5px;
+}
 
 .fa-heart {
   position: absolute;
@@ -229,11 +236,12 @@ header form label {
   transition: color 1s ease-out;
   font-size: 2rem;
 }
-.fa-heart:hover::before{
+
+.fa-heart:hover::before {
   cursor: pointer;
   font-weight: bold;
   color: transparent;
-  background: linear-gradient(to top,$primaire  ,$secondaire);
+  background: linear-gradient(to top, $primaire, $secondaire);
   -webkit-background-clip: text;
   transform: translate(-50%, -50%);
   transition: all .3s ease-out;
@@ -249,7 +257,6 @@ header form label {
 $dark: rgba(0, 0, 0, 0.8);
 
 
-
 #no-freeze-spinner {
   position: fixed;
   top: 0;
@@ -262,19 +269,21 @@ $dark: rgba(0, 0, 0, 0.8);
   z-index: -1;
   background: $dark;
 }
+
 .no-freeze-spinner #no-freeze-spinner {
   z-index: 9999;
   opacity: 0.5;
   transform: scale(1);
   animation: loading-disparition .5s 3s ease-in forwards;
 }
+
 @keyframes loading-disparition {
- from {
-   opacity:1;
+  from {
+    opacity: 1;
   }
 
   to {
-   opacity: 0;
+    opacity: 0;
     z-index: -6;
     position: absolute;
     width: 0%;
@@ -282,6 +291,7 @@ $dark: rgba(0, 0, 0, 0.8);
 
   }
 }
+
 #no-freeze-spinner > div > div {
   animation-play-state: paused;
   border: 5px solid $primaire;
@@ -291,6 +301,7 @@ $dark: rgba(0, 0, 0, 0.8);
   width: 100%;
   height: 100%;
 }
+
 #no-freeze-spinner > div {
   position: absolute;
   top: 0;
@@ -304,9 +315,11 @@ $dark: rgba(0, 0, 0, 0.8);
   height: 60px;
   padding: 5px;
 }
+
 .no-freeze-spinner #no-freeze-spinner div div {
   animation-play-state: running;
 }
+
 @keyframes loadicons {
   0% {
     transform: scale(0) translate3d(0, 0, 0);
@@ -321,11 +334,13 @@ $dark: rgba(0, 0, 0, 0.8);
     transform: scale(0) translate3d(0, 0, 0);
   }
 }
+
 @keyframes rotate {
   100% {
     transform: rotate(360deg);
   }
 }
+
 .no-freeze-spinner #no-freeze-spinner i {
   font-size: 24px;
   position: absolute;
@@ -340,23 +355,23 @@ $dark: rgba(0, 0, 0, 0.8);
   line-height: 1;
   transform: scale(0) translate3d(0, 0, 0);
 }
+
 .no-freeze-spinner #no-freeze-spinner i:nth-of-type(1) {
   animation: loadicons 3s infinite ease-in-out;
 }
+
 .no-freeze-spinner #no-freeze-spinner i:nth-of-type(2) {
   animation: loadicons 3s 1s infinite ease-in-out;
 }
+
 .no-freeze-spinner #no-freeze-spinner i:nth-of-type(3) {
   animation: loadicons 3s 2s infinite ease-in-out;
 }
 
 
-
-
-
 @media screen and (min-width: 426px) /**tablette**/
 {
-  main  {
+  main {
 
     display: grid;
     grid-template-areas:
@@ -387,8 +402,9 @@ $dark: rgba(0, 0, 0, 0.8);
     text-align: center;
   }
 }
+
 @media screen and (min-width: 769px) //**ordinateur***/
-  {
+{
   header ul li {
     width: 50%;
 

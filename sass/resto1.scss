@@ -10,9 +10,11 @@
   font-family: 'Roboto';
 
 }
+
 .valider {
   text-align: center;
 }
+
 header a i {
   position: absolute;
   top: 10px;
@@ -30,23 +32,19 @@ input {
 }
 
 
-
 h1 {
   font-family: 'Shrikhand';
   color: black;
 }
 
- h3 {
+h3 {
 
   font-weight: bold;
 }
 
 
-
-
 header {
   background-color: #f6f6f6;
-
 
 
   h1 {
@@ -98,6 +96,7 @@ section div {
 main {
   background-color: lightgray;
   margin-top: -30px;
+
   header {
     padding-top: 20px;
   }
@@ -165,6 +164,7 @@ footer i {
 
 
 }
+
 .ctn {
   overflow: hidden;
   cursor: pointer;
@@ -186,9 +186,9 @@ footer i {
   flex-grow: 1
 }
 
-.ctn__txt>h3 {
+.ctn__txt > h3 {
   margin-bottom: 5px;
-    text-overflow: ellipsis;
+  text-overflow: ellipsis;
   width: 90%;
   white-space: nowrap;
   overflow: hidden
@@ -201,7 +201,7 @@ footer i {
   padding-right: 10px
 }
 
-.ctn__txt__ctn>p:nth-child(2) {
+.ctn__txt__ctn > p:nth-child(2) {
   font-weight: bold;
   font-size: 1.2rem;
   margin-left: 10px
@@ -231,7 +231,7 @@ footer i {
   border-radius: 0 15px 15px 0
 }
 
-.ctn__check>i {
+.ctn__check > i {
   font-size: 20px;
 }
 
@@ -240,7 +240,7 @@ footer i {
   transition: 400ms;
 }
 
-.ctn:hover .ctn__check>i {
+.ctn:hover .ctn__check > i {
   animation-name: rotate;
   animation-duration: 400ms;
 }
@@ -292,37 +292,41 @@ a, footer h1 {
 i {
   padding-right: 0.5em;
 }
-@media screen and (min-width: 769px){
+
+@media screen and (min-width: 769px) {
 
 
-article{
-  display: grid;
-  grid-template-areas: "entree plat dessert"
+  article {
+    display: grid;
+    grid-template-areas: "entree plat dessert"
  ". commander .";
-  grid-column-gap: 20px;
+    grid-column-gap: 20px;
 
-}
-#entree {
-  grid-area: entree;
+  }
+  #entree {
+    grid-area: entree;
 
-}
-#plat {
-  grid-area: plat;
+  }
+  #plat {
+    grid-area: plat;
 
-}
-#dessert {
-  grid-area: dessert;
+  }
+  #dessert {
+    grid-area: dessert;
 
+  }
+  .valider {
+    grid-area: commander;
+  }
 }
-.valider {
-  grid-area: commander;
-}}
-@media screen and  (min-width: 426px) and (max-width: 768px) /**tablette**/ {
+
+@media screen and (min-width: 426px) and (max-width: 768px) /**tablette**/
+{
   header img {
     height: 270px;
     width: 100%;
   }
-  article{
+  article {
     display: grid;
     grid-template-areas: "entree plat"
 "dessert commander";
@@ -338,7 +342,7 @@ article{
   #dessert {
     grid-area: dessert;
   }
-.valider {
+  .valider {
     grid-area: commander;
   }
 }
