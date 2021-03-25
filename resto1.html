@@ -16,7 +16,7 @@
 <header>
     <a href="index.html">
         <i class="fas fa-arrow-left"></i>
-        <h1>Ohmyfood</h1>
+        <h1>ohmyfood</h1>
     </a>
 
     <img src="images/restaurants/resto1.jpg" alt="">
@@ -28,13 +28,14 @@
     </header>
     <form>
         <article>
-            <header>
-                <h2>Entrées</h2>
-            </header>
-            <section>
+            <section id="entree">
+                <header>
+                    <h2>Entrées</h2>
+                </header>
 
-                <label>
-                    <input type="radio">
+
+
+                    <input type="radio" name="entree" value="entree">
                     <div class="ctn">
                         <div class="ctn__txt">
                             <h3>Fricassée d'escargot</h3>
@@ -45,149 +46,156 @@
                         </div>
                         <div class="ctn__check">
                             <i class="fas fa-check-circle"></i>
-                        </div>
-                    </div>
-                </label>
 
-
-                    <input type="radio">
-                <div class="ctn">
-                    <div class="ctn__txt">
-                        <h3>Foie gras de canard mi-cuit</h3>
-                        <div class="ctn__txt__ctn">
-                            <p>Et ses copeaux de truffe noire</p>
-                            <p>35€</p>
-                        </div>
-                    </div>
-                    <div class="ctn__check">
-                        <i class="fas fa-check-circle"></i>
-                    </div>
+                </div>
                 </div>
 
 
-                <input type="radio">
-                <div class="ctn">
-                    <div class="ctn__txt">
-                        <h3>Oeuf au plat</h3>
-                        <div class="ctn__txt__ctn">
-                            <p>Assaisonné à la truffe sur lit de caviar</p>
-                            <p>20€</p>
+
+                    <input type="radio" name="entree" value="entree2">
+                    <div class="ctn">
+                        <div class="ctn__txt">
+                            <h3>Foie gras de canard mi-cuit</h3>
+                            <div class="ctn__txt__ctn">
+                                <p>Et ses copeaux de truffe noire</p>
+                                <p>35€</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="ctn__check">
-                        <i class="fas fa-check-circle"></i>
-                    </div>
+                        <div class="ctn__check">
+                            <i class="fas fa-check-circle"></i>
                 </div>
+                </div>
+
+
+                    <input type="radio" name="entree" value="entree3">
+                    <div class="ctn">
+                        <div class="ctn__txt">
+                            <h3>Oeuf au plat</h3>
+                            <div class="ctn__txt__ctn">
+                                <p>Assaisonné à la truffe sur lit de caviar</p>
+                                <p>20€</p>
+                            </div>
+                        </div>
+                        <div class="ctn__check">
+                            <i class="fas fa-check-circle"></i>
+             </div>
+                </div>
+
 
             </section>
 
-            <section>
+            <section id="plat">
                 <header>
                     <h2>Plats</h2>
                 </header>
 
                 <!-- plats -->
-                <input type="radio">
-                <div class="ctn">
-                    <div class="ctn__txt">
-                        <h3>Filet de boeuf aux herbes</h3>
-                        <div class="ctn__txt__ctn">
-                            <p>Accompagné de sa ribambelle de légumes</p>
-                            <p>40€</p>
+                 <input type="radio" name="plat1">
+                    <div class="ctn">
+                        <div class="ctn__txt">
+                            <h3>Filet de boeuf aux herbes</h3>
+                            <div class="ctn__txt__ctn">
+                                <p>Accompagné de sa ribambelle de légumes</p>
+                                <p>40€</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="ctn__check">
-                        <i class="fas fa-check-circle"></i>
-                    </div>
+                        <div class="ctn__check">
+                            <i class="fas fa-check-circle"></i>
+                 </div>
                 </div>
 
 
-              <input type="radio">
-                <div class="ctn">
-                    <div class="ctn__txt">
-                        <h3>Parmentier de queue de boeuf</h3>
-                        <div class="ctn__txt__ctn">
-                            <p>À la truffe noire sur sa purée de panais</p>
-                            <p>35€</p>
+                <input type="radio" name="plat2">
+                    <div class="ctn">
+                        <div class="ctn__txt">
+                            <h3>Parmentier de queue de boeuf</h3>
+                            <div class="ctn__txt__ctn">
+                                <p>À la truffe noire sur sa purée de panais</p>
+                                <p>35€</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="ctn__check">
-                        <i class="fas fa-check-circle"></i>
-                    </div>
+                        <div class="ctn__check">
+                            <i class="fas fa-check-circle"></i>
+                 </div>
                 </div>
-            <input type="radio">
-                <div class="ctn">
-                    <div class="ctn__txt">
-                        <h3>Filet de turbot</h3>
-                        <div class="ctn__txt__ctn">
-                            <p>Aux agrumes</p>
-                            <p>44€</p>
+
+                <input type="radio" name="plat3">
+                    <div class="ctn">
+                        <div class="ctn__txt">
+                            <h3>Filet de turbot</h3>
+                            <div class="ctn__txt__ctn">
+                                <p>Aux agrumes</p>
+                                <p>44€</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="ctn__check">
-                        <i class="fas fa-check-circle"></i>
-                    </div>
+                        <div class="ctn__check">
+                            <i class="fas fa-check-circle"></i>
+                 </div>
                 </div>
+
             </section>
-            <section>
+            <section id="dessert">
                 <!-- desserts -->
                 <header>
                     <h2>Desserts</h2>
                 </header>
 
 
-                    <input type="radio">
-                <div class="ctn">
-                    <div class="ctn__txt">
-                        <h3>Paris-Brest</h3>
-                        <div class="ctn__txt__ctn">
-                            <p>Revisité</p>
-                            <p>18€</p>
+                <input type="radio" name="dessert">
+                    <div class="ctn">
+                        <div class="ctn__txt">
+                            <h3>Paris-Brest</h3>
+                            <div class="ctn__txt__ctn">
+                                <p>Revisité</p>
+                                <p>18€</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="ctn__check">
-                        <i class="fas fa-check-circle"></i>
-                    </div>
+                        <div class="ctn__check">
+                            <i class="fas fa-check-circle"></i>
+                 </div>
                 </div>
 
 
-                    <input type="radio">
-                <div class="ctn">
-                    <div class="ctn__txt">
-                        <h3>Macaron au chocolat d'exception</h3>
-                        <div class="ctn__txt__ctn">
-                            <p>Et glace à la vanille de Madagascar</p>
-                            <p>22€</p>
+                 <input type="radio" name="dessert">
+                    <div class="ctn">
+                        <div class="ctn__txt">
+                            <h3>Macaron au chocolat d'exception</h3>
+                            <div class="ctn__txt__ctn">
+                                <p>Et glace à la vanille de Madagascar</p>
+                                <p>22€</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="ctn__check">
-                        <i class="fas fa-check-circle"></i>
-                    </div>
+                        <div class="ctn__check">
+                            <i class="fas fa-check-circle"></i>
+               </div>
                 </div>
 
 
-        <input type="radio">
-                <div class="ctn">
-                    <div class="ctn__txt">
-                        <h3>Mousse au chocolat </h3>
-                        <div class="ctn__txt__ctn">
-                            <p>Au piment d'Espelette et à la truffe noire</p>
-                            <p>23€</p>
+                 <input type="radio" name="dessert">
+                    <div class="ctn">
+                        <div class="ctn__txt">
+                            <h3>Mousse au chocolat </h3>
+                            <div class="ctn__txt__ctn">
+                                <p>Au piment d'Espelette et à la truffe noire</p>
+                                <p>23€</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="ctn__check">
-                        <i class="fas fa-check-circle"></i>
-                    </div>
+                        <div class="ctn__check">
+                            <i class="fas fa-check-circle"></i>
+              </div>
                 </div>
 
 
             </section>
-          <div class="valider"><button id="commander">Commander</button></div>
+            <div class="valider">
+                <button id="commander">Commander</button>
+            </div>
+        </article>
     </form>
-    </article>
+
 </main>
 <footer>
-    <h1>Ohmyfood</h1>
+    <h1>ohmyfood</h1>
     <ul>
         <li>
             <a href="#"><i class="fas fa-utensils"></i>Proposer un restaurant</a>
