@@ -1,4 +1,4 @@
-@mixin bouton(){
+@mixin bouton() {
   padding: 10px;
   margin-top: 30px;
   border-radius: 20px;
@@ -6,15 +6,16 @@
   color: white;
   font-size: 1.1rem;
   font-weight: bold;
-  background: linear-gradient(166deg, rgba(255,121,218,1) 0%, rgba(147,86,220,1) 100%);
+  background: linear-gradient(166deg, rgba(255, 121, 218, 1) 0%, rgba(147, 86, 220, 1) 100%);
   box-shadow: 0 0 2px black;
   &:hover {
-    box-shadow: 5px 5px 12px 1px rgba(0,0,0,1);
+    box-shadow: 5px 5px 12px 1px rgba(0, 0, 0, 1);
     transform: scale(1.1);
     opacity: 0.7;
   }
 }
-@mixin footer(){
+
+@mixin footer() {
   padding: 20px;
   background-color: black;
 }
