@@ -301,6 +301,7 @@ i {
     grid-template-areas: "entree plat dessert"
  ". commander .";
     grid-column-gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
 
   }
   #entree {
@@ -318,7 +319,7 @@ i {
   .valider {
     grid-area: commander;
   }
-  footer{
+  footer {
     text-align: center;
   }
 }
@@ -333,8 +334,8 @@ i {
     display: grid;
     grid-template-areas: "entree plat"
 "dessert commander";
-    grid-template-columns: 1fr 1fr;
-    grid-column-gap: 20px;
+    grid-template-columns: 50% 50%;
+    grid-column-gap: 10px;
   }
   #entree {
     grid-area: entree;
@@ -350,5 +351,8 @@ i {
   }
   footer {
     text-align: center;
+  }
+  .ctn__txt > h3 {
+    white-space: inherit;
   }
 }

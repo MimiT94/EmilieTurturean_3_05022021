@@ -131,6 +131,7 @@ article p {
 #commander:hover {
   box-shadow: 5px 5px 12px 1px black;
   transform: scale(1.1);
+  opacity: 0.7;
 }
 
 footer {
@@ -297,6 +298,7 @@ i {
     display: grid;
     grid-template-areas: "entree plat dessert" ". commander .";
     grid-column-gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
   }
 
   #entree {
@@ -328,8 +330,8 @@ i {
   article {
     display: grid;
     grid-template-areas: "entree plat" "dessert commander";
-    grid-template-columns: 1fr 1fr;
-    grid-column-gap: 20px;
+    grid-template-columns: 50% 50%;
+    grid-column-gap: 10px;
   }
 
   #entree {
@@ -350,6 +352,10 @@ i {
 
   footer {
     text-align: center;
+  }
+
+  .ctn__txt > h3 {
+    white-space: inherit;
   }
 }
 
